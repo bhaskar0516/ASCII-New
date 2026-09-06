@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout and download repos
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Install COWSAY
         run: sudo apt install COWSAY -y
