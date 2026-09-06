@@ -1,0 +1,20 @@
+name: Install and Execute ASCII 
+on: push
+jobs:
+  first_job:
+    runs-on:
+    steps:
+      - name: checkout and download repos
+        run: actions/@checkout@v4
+
+      - name: Install COWSAY
+        run: sudo apt install COWSAY -y
+
+      - name: Execute COWSAY
+        run: COWSAY -f dragon " run run Iam coming" >> dragon.txt
+
+      - name: list the files
+        run: ls -ltra
+
+      - name: Read files
+        run: cat dragon.txt
